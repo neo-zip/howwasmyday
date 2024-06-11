@@ -1,0 +1,111 @@
+.auth {
+   --bg-color: var(--bg-h2);
+
+   padding: 50px;
+
+   background-color: var(--bg-h2);
+   border-radius: var(--border-radius);
+
+   display: flex;
+   flex-direction: column;
+   gap: 5px;
+
+   transition: var(--transition);
+}
+
+.auth .invalid {
+   border: 2px solid var(--error) !important;
+}
+
+.auth input[type="text"],
+.auth input[type="password"] {
+   padding: 20px 20px;
+   margin-bottom: 15px;
+
+   height: 50px;
+   min-width: 400px;
+
+   border: none;
+   resize: none;
+
+   background-color: transparent;
+   border: 2px solid var(--bg-h3);
+   border-radius: var(--border-radius);
+
+   font-family: var(--font-primary);
+   color: var(--text-h1);
+   font-size: 16px;
+
+   transition: var(--transition);
+}
+
+.checkbox-outer {
+   height: 50px;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+.checkbox-outer .checkbox {
+   appearance: none;
+   border-radius: 50px;
+
+   border: 2px solid var(--bg-h3);
+
+   margin: 0;
+   position: relative;
+
+   height: 24px;
+   width: 52px;
+}
+
+.checkbox-outer .checkbox::before {
+   content: '';
+   position: absolute;
+}
+
+.checkbox-outer .checkbox,
+.checkbox-outer .checkbox::after {
+   transition: var(--transition);
+
+}
+
+.checkbox-outer .checkbox::after {
+   background-color: var(--text-l3);
+   border-radius: 50%;
+   content: "";
+   height: 16px;
+   width: 16px;
+   position: absolute;
+   left: 3px;
+   top: 2px;
+}
+
+.checkbox-outer * {
+   cursor: pointer;
+}
+
+.checkbox-outer .checkbox:checked {
+   border: 2px solid var(--success);
+}
+
+.checkbox-outer .checkbox:checked::after {
+   left: 29px;
+}
+
+.checkbox-outer :focus:not(.focus-visible) {
+   outline: 0;
+}
+
+@media only screen and (max-width: 700px) {
+   .auth {
+      padding: 0;
+      background-color: transparent;
+   }
+
+   .auth input[type="text"],
+   .auth input[type="password"] {
+      width: 100%;
+      min-width: 0;
+   }
+}

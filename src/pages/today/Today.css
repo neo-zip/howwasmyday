@@ -1,0 +1,117 @@
+.today {
+   max-height: 800px;
+   width: 90%;
+}
+
+.today h1 {
+   line-height: 1.1;
+   font-size: 4.5em;
+}
+
+.today .options {
+   width: 100%;
+   gap: 50px;
+
+   margin: 10% 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.today .options button {
+   display: inline-flex;
+   cursor: pointer;
+
+   border-radius: 100%;
+   padding: 50px;
+
+   background-color: var(--button-color-h1);
+   transition: var(--transition);
+}
+
+.today .options h3 {
+   margin-top: 15px;
+}
+
+.today .options button svg {
+   height: 48px;
+   width: 48px;
+}
+
+.today .options div:nth-child(1) button:hover {
+   background-color: var(--success);
+}
+
+.today .options div:nth-child(2) button:hover {
+   background-color: var(--warn);
+}
+
+.today .options div:nth-child(3) button:hover {
+   background-color: var(--error);
+}
+
+.today .options div button:focus-visible {
+   outline: var(--focus);
+}
+
+.today textarea {
+   padding: 20px 20px;
+   margin-bottom: 10px;
+
+   height: 200px;
+   width: 400px;
+
+   border: none;
+   resize: none;
+
+   background-color: transparent;
+   border: 2px solid var(--bg-h3);
+   border-radius: var(--border-radius);
+
+   font-family: var(--font-primary);
+   color: var(--text-h1);
+   font-size: 16px;
+
+   transition: var(--transition);
+}
+
+.today .notes {
+   width: 50%;
+   max-width: 675px;
+   margin: 50px 0;
+
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   gap: 20px;
+
+   color: var(--text-h1);
+}
+
+.today .right {
+   width: 20%;
+}
+
+@media only screen and (max-width: 700px) {
+   .today .options {
+      gap: 35px;
+   }
+
+   .today .options button {
+      padding: 15px;
+   }
+
+   .today .notes {
+      flex-direction: column;
+   }
+
+   .today textarea {
+      width: 90vw;
+   }
+
+   .today .right {
+      width: 100%;
+      text-align: center;
+   }
+}

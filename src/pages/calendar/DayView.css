@@ -1,0 +1,47 @@
+.dayview {
+   --bg-color: var(--bg-l1);
+   backdrop-filter: blur(20px);
+}
+
+.dayview .note-outer {
+   border-radius: var(--border-radius);
+   overflow: hidden;
+   max-width: 600px;
+}
+
+.dayview .inner {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+
+   margin: 0 5%;
+}
+
+.dayview .title {
+   z-index: -1;
+
+   position: absolute;
+
+   color: var(--bg-h3);
+
+   font-size: 10em;
+}
+
+.dayview .note {
+   padding: 20px;
+
+   max-width: 600px;
+   max-height: 200px;
+   overflow-y: scroll;
+
+   line-height: 1.4;
+
+   background-color: var(--bg-h1);
+   border-radius: var(--border-radius);
+}
+
+@media (max-width: 700px) {
+   .dayview .title {
+      font-size: 20vw;
+   }
+}

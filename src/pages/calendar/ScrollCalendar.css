@@ -1,0 +1,28 @@
+.calendar .scroll {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 10px;
+
+   margin-bottom: 15px;
+}
+
+.calendar .scroll p {
+   font-weight: bold;
+   color: var(--text-l3);
+   font-size: 1.25em;
+
+   user-select: none;
+}
+
+.calendar .scroll button {
+   display: inline-flex;
+   fill: var(--text-l3);
+   cursor: pointer;
+
+   transition: var(--transition);
+}
+
+.calendar .scroll button:focus-visible {
+   fill: var(--accent-h1);
+}

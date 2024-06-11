@@ -1,0 +1,10 @@
+.blur {
+   z-index: 15;
+   backdrop-filter: blur(20px);
+
+   position: absolute;
+
+   display: grid;
+   place-items: center;
+   text-align: center;
+}
